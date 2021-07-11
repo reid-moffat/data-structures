@@ -17,4 +17,8 @@ Currently learned data structures:
   * Heap
 
 Algorithms:
+* Graphs
+ * Kruskal’s algorithm
+ * Prims' Algoithm
 * Hashing
+* Sorting
