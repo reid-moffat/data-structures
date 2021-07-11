@@ -9,9 +9,9 @@ Currently learned data structures:
 * Graph
 * Map
 * Set
-* Trees
-  * Binary trees
-  * Binary search trees
+* Tree
+  * Binary tree
+  * Binary search tree
     * AVL tree
     * Red-Black tree
   * Heap
