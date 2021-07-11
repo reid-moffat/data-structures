@@ -1,3 +1,21 @@
 # data-structures
 
-Common data structures and algorithms with their python implmentations. The purpose of this repo is to create a quick and easy reference guide to study for interview questions
+Currently learned data structures:
+* Array-type structures
+  * Array (not included here)
+  * List (not included here)
+  * Linked list
+  * Stack
+  * Queue
+* Graph
+* Map
+* Set
+* Trees
+  * Binary trees
+  * Binary search trees
+    * AVL tree
+    * Red-Black tree
+  * Heap
+
+Algorithms:
+* Hashing
