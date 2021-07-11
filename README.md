@@ -13,7 +13,7 @@ Currently learned data structures:
   * Binary tree
   * Binary search tree
     * AVL tree
-    * Red-Black tree
+    * Red-black tree
   * Heap
 
 Algorithms:
