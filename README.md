@@ -1,9 +1,8 @@
 # data-structures
 
 Currently learned data structures:
-* Array-type structures
-  * Array (not included here)
-  * List (not included here)
+* Linear data structures
+  * Traditional Arrays and Lists (not included here)
   * Linked list
   * Stack
   * Queue
