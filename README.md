@@ -16,9 +16,9 @@ Currently learned data structures:
     * Red-black tree
   * Heap
 
-Algorithms:
+Algorithms and concepts:
 * Graphs
- * Kruskal’s algorithm
- * Prims' Algoithm
+  * Kruskal’s algorithm
+  * Prims' Algoithm
 * Hashing
 * Sorting
