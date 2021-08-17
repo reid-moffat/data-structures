@@ -42,7 +42,7 @@ Binary tree operations are commonly:
 1. Search: With a sorted binary tree, sorting is extremely efficient O(log(n))
 2. Add node: O(1), O(log(n)) or O(n) depending on how the tree is set and and how you want to insert it
 3. Remove node: Same as add for complexity
-4. Traverse: There are three main ways of doing this. See 'traversals.png'; they all process the current node and
+4. Traverse: There are three main ways of doing this. See 'binary_traversals.png'; they all process the current node and
    recursively traverse the left and right subtree, but the order is different
     a) Preorder is curr -> left -> right
     b) In-order is left -> curr -> right

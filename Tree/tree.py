@@ -23,6 +23,9 @@ There are a multitude of different uses for trees. Some examples:
 -Family trees (two parents would be represented with one node in this case)
 -Simplify mathematical expressions
 -Decision trees
+-Huffman trees for lossless text compression
+-Databases use B-Trees (this is not a binary tree, it can have more than two children per node)
+-Job interviews...
 """
 
 
