@@ -6,15 +6,15 @@ Currently learned data structures:
   * Linked list
   * Stack
   * Queue
-* Graph
-* Map
-* Set
 * Tree
   * Binary tree
   * Binary search tree
     * AVL tree
     * Red-black tree
   * Heap
+* Graph
+* Map
+* Set
 
 Algorithms and concepts:
 * Graphs
