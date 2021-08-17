@@ -7,6 +7,11 @@ Uses of queues:
 -Lists of tasks to do
 -A first-come-first-serve common resource shared between multiple people
 
+Variations of queues:
+-Priority queue (very useful in a lot of situations; priority is put before insertion order)
+-Double-ended queue (deque); often used for queues with a maximum size (whe na new item is added, the oldest item is
+ removed to save space
+
 Note: Encapsulation MUST be followed with a stack. If we can access and directly mutate the underlying data structure
 used for storage, it no longer becomes a stack (just an array/linked list/etc)
 """
@@ -17,6 +22,7 @@ class Queue:
     def __init__(self):
         self.__queue = []
 
+    # For the len() operator i.e len(queue) works
     def __len__(self):
         return len(self.__queue)
 

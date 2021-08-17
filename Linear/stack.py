@@ -19,6 +19,10 @@ class Stack:
     def __init__(self):
         self.__stack = []
 
+    # For the len() operator i.e len(stack) works
+    def __len__(self):
+        return len(self.__stack)
+
     def empty(self):
         return len(self.__stack) == 0
 
@@ -26,26 +30,19 @@ class Stack:
         return len(self.__stack)
 
     def top(self):
-        if len(self.__stack) > 0:
-            return self.__stack[-1]
-        else:
-            return None
+        return self.__stack[-1] if len(self.__stack) > 0 else None
 
     def push(self, e):
         self.__stack.append(e)
 
     def pop(self):
-        if len(self.__stack) > 0:
-            return self.__stack.pop()
-        else:
-            raise IndexError("Stack is empty")
+        return self.__stack.pop() if len(self.__stack) > 0 else None
 
 
 if __name__ == "__main__":
     letters = Stack()
-    word = "Hello, world!"
 
-    for i in word:
+    for i in "Hello, world!":
         letters.push(i)
 
     for i in range(letters.size()):

@@ -21,6 +21,11 @@ When should linked lists be used over arrays?
 -When the size is constantly changing
 -When inserting to the middle of the list is important
 (Not too often; arrays are usually the better option)
+
+Variations of a linked list:
+-Doubly linked list (allows for reverse iteration, but takes more memory)
+-Circular linked list (last node points to the first node)
+-Doubly circular linked list
 """
 import random
 
@@ -32,34 +37,50 @@ class Node:
         self.next = None
 
 
+# There a multitude of different methods a linked list can have depending
+# on the intended use; this one is a general, basic list
 class LinkedList:
-    def __init__(self, head=None):
-        self.head = head
+    def __init__(self):
+        self.__head = None
+
+    # For the 'in' operator i.e 'if 10 in linkedList' works
+    def __contains__(self, item):
+        curr = self.__head
+        while curr:
+            if curr.val == item:
+                return True
+            curr = curr.next
+        return False
+
+    def get_first(self) -> Node:
+        return self.__head
 
     def print(self):
-        curr = self.head
+        curr = self.__head
         while curr:
             print(f"{curr.val} ", end='')
             curr = curr.next
 
-    def append(self, node):
-        if not self.head:
-            self.head = node
+    def append(self, node: Node):
+        if not self.__head:
+            self.__head = node
             return
-        curr = self.head
+        curr = self.__head
         while curr.next:
             curr = curr.next
         curr.next = node
 
+    def add_first(self, node: Node):
+        node.next = self.__head
+        self.__head = node
+
 
 if __name__ == "__main__":
-    nodes = []
-    n = 50
-    for i in range(n):
-        nodes.append(Node(random.randint(0, 100)))
+    linked_list = LinkedList()
 
-    linked_list = LinkedList(nodes[0])
-    for i in range(n-1):
-        linked_list.append(nodes[i + 1])
+    for i in range(50):
+        linked_list.append(Node(random.randint(0, 100)))
 
+    print(f"Is 50 in this Linked List? {50 in linked_list}")
+    print("Linked List nodes in order: ")
     linked_list.print()
