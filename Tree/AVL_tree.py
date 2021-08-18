@@ -6,13 +6,23 @@ We can solve this issue with a self-balancing tree: the two most common being:
 1: AVL tree- faster for looking up values and may take less space than red-black trees (depending on the situation)
 2: Red-Black trees- faster for insertion and deletion. It is more general purpose and used in Java, C, Linux, etc
 
-AVL trees work by:
+AVL trees work by storing the balance factor fo each node:
 -Starting with a standard binary search tree
 -Storing the balance factor for each node. This is the right subtree's height minus it left subtree's height (make sure
  to also update it each time there is an insertion/deletion)
 -A balance factor of 0 or +-1 is ok because its approximately balanced. If not, we need to 'rotate' the tree
 -There are four cases of imbalance. We can consider the grandparent node since there is a maximum balance factor of +-2,
  meaning we can rotate around the nodes
+
+Red-black trees work by storing a bit for each node, specifying whether each node is 'red' or 'black':
+-Starting with a standard binary search tree
+-Each node is either red or black:
+ 1. The root node and all null leaves (a leaf's left and right (which are None)) are black
+ 2. If a node is red, all of its children are black
+ 3. For every node, every path from the node to descendant leaves contains the same number of black nodes (we don’t
+    count the root, but this won’t change if it is balanced or not anyway)
+Note that the tree is only roughly balanced. There could be an imbalance by a factor of 2 at most, making search less
+efficient.
 
 The example below is from CISC 235 assignment 2. Note this is a tree map (nodes have a key:value pair), but much of the
 logic like rotations are similar (see https://i.imgur.com/SEsSRit.png for a visual rotation guide)
