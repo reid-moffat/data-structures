@@ -74,6 +74,8 @@ class BST:
                     curr_parent.left = curr_node.right  # And delete this node
                     return node
 
+        if not self.root:
+            return False
         parent = None
         curr = self.root
         if curr.val == val:  # Handles the root case
@@ -92,7 +94,6 @@ class BST:
                 if parent.right == curr:
                     parent.right = newNode(curr)
                 return True
-
         return False
 
     def search(self, val):
@@ -153,17 +154,25 @@ class BST:
 if __name__ == "__main__":
     bst = BST()
     bst.insert(50)
-    bst.insert(51)
-    bst.insert(521)
-    bst.insert(511)
-    bst.insert(31)
-    bst.insert(16)
 
+    nodes = [50]
     for i in range(50):
-        bst.insert(random.randint(1, 100))
+        value = random.randint(1, 100)
+        nodes.append(value)
+        bst.insert(value)
 
-    print(f"\nMinimum value: {bst.minValue()}")
-    print(f"Maximum value: {bst.maxValue()}")
-
-    print(f"51 deleted? {bst.delete(51)}")
     bst.print2D()
+
+    maximum = bst.maxValue()
+    assert maximum == max(nodes)
+    print(f"\nMaximum value: {maximum}")
+
+    minimum = bst.minValue()
+    assert minimum == min(nodes)
+    print(f"Minimum value: {minimum}")
+
+    for i in nodes:
+        bst.delete(i)
+
+    bst.print2D()
+    assert bst.root is None
