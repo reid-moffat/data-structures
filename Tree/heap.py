@@ -88,6 +88,7 @@ if __name__ == "__main__":
     q = PriorityQueue()
     n = 10
 
+    # A more realistic priority queue would have elements with a priority and some sort of data (like a node structure)
     for num in range(n):
         q.enqueue(num)
 

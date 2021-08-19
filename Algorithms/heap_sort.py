@@ -16,10 +16,10 @@ import time
 
 def heapSort(arr):
 
-    def heapify(stop, root):
+    def heapify(root, stop):
         largest = root  # Initialize largest as root
-        left = 2 * root + 1  # left = 2*i + 1
-        right = 2 * root + 2  # right = 2*i + 2
+        left = 2 * root + 1  # left node index
+        right = 2 * root + 2  # right node index
 
         # If left child of root exists and is greater than root
         if left < stop and arr[largest] < arr[left]:
@@ -33,18 +33,18 @@ def heapSort(arr):
         if largest != root:
             arr[root], arr[largest] = arr[largest], arr[root]  # swap
 
-            # Heapify the root.
-            heapify(stop, largest)
+            # Heapify the root
+            heapify(largest, stop)
 
     # Build a max heap
     end = len(arr)
-    for i in range(end // 2 - 1, -1, -1):
-        heapify(end, i)
+    for i in range(end // 2 - 1, -1, -1):  # end // 2 - 1 is the last non-leaf node
+        heapify(i, end)
 
     # One by one move the max element to the end of the array
     for i in range(end - 1, 0, -1):
-        arr[i], arr[0] = arr[0], arr[i]  # Swap the last element and max element
-        heapify(i, 0)  # Move the last element to its correct place (and the largest element to the top)
+        arr[i], arr[0] = arr[0], arr[i]  # Swap the last element and max element (of the unsorted portion)
+        heapify(0, i)  # Move the last element to its correct place (and the largest element to the top)
 
 
 if __name__ == "__main__":
@@ -56,4 +56,4 @@ if __name__ == "__main__":
     end_time = time.time()
     print(f"Execution time: {1000*(end_time - start_time):.2f} ms")
 
-    assert [array[i] <= array[i+1] for i in range(n-1)]
+    assert all([array[i] <= array[i+1] for i in range(n-1)])
