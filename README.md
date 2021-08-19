@@ -9,16 +9,16 @@ Currently learned data structures:
 * Tree
   * Binary tree
   * Binary search tree
+    * Traditional BST
     * AVL tree
     * Red-black tree
-  * Heap
-* Graph
-* Map
+  * Array-based heap
 * Set
+* Graph
 
 Algorithms and concepts:
 * Graphs
   * Kruskal’s algorithm
   * Prims' Algoithm
 * Hashing
-* Sorting
+* Heapsort
