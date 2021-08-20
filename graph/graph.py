@@ -34,7 +34,12 @@ and there is not clear way of determining what the next one is. There are two ma
 -Breadth-first search goes through all of the nodes based on their distance from the first node, like a level-order
  traversal (all nodes 1 away, then 2 away, etc). Use a queue to traverse the graph and have a 'visited' list to store
  the vertices that have already been visited so we don't traverse the same node multiple times
--Depth-first search keeps moving forward until it hits a dead end or previously-visited vertex, then backtracks
+-Depth-first search keeps moving forward until it hits a dead end or previously-visited vertex, then backtracks. This
+ can be achieved with
+
+Although it seems like traversals would have a complexity of O(n^2), they don't have to check everything so the
+complexity is more like O(E + V) (edges + vertices). Breadth-first search is less memory efficient since we can't
+backtrack as quickly, but depth-first takes longer paths to each node
 """
 from random import randint
 
@@ -64,15 +69,14 @@ class Graph:
     def edge_exists(self, v1, v2):
         return self._graph[v1][v2] == 1
 
-    def bfs(self):
+    def bfs(self, starting_node=None):
         """
-        Performs a breadth-first search on a Graph using a random starting node
+        Performs a breadth-first search on a Graph
 
-        :return: total weight from this tree
-        :rtype: int
+        :param starting_node: node to begin with (optional; otherwise a random node will be chosen)
         """
-        total_weight = 0
-        starting_node = randint(0, len(self._graph) - 1)
+        if not isinstance(starting_node, int) or not (0 <= starting_node < self._size):
+            starting_node = randint(0, len(self._graph) - 1)
 
         queue = [starting_node]
         visited = [False for node in range(len(self._graph))]
@@ -85,18 +89,35 @@ class Graph:
             for neighbour in range(len(self._graph)):
                 weight = self._graph[vertex][neighbour]
                 if weight and not visited[neighbour]:
-                    total_weight += weight
+                    print(neighbour, end=' ')
                     queue.append(neighbour)
                     visited[neighbour] = True
 
-        return total_weight
+    def dfs(self, node=None):
+        """
+        Performs a depth-first search on a Graph
+
+        :param node: node to begin with (optional; otherwise a random node will be chosen)
+        """
+        def util(curr_node, visited):
+            visited.add(curr_node)
+            print(curr_node, end=' ')
+
+            for neighbour in self._graph[curr_node]:
+                if neighbour not in visited:
+                    util(neighbour, visited)
+
+        if not isinstance(node, int) or not (0 <= node < self._size):
+            node = randint(0, len(self._graph) - 1)
+        visited_set = set()
+        util(node, visited_set)
 
 
 if __name__ == "__main__":
     n = 10
     graph = Graph(n)
 
-    for i in range(15):
+    for i in range(25):
         graph.add_edge(randint(0, n-1), randint(0, n-1))
 
-    print(graph.bfs())
+    print(graph.dfs())
