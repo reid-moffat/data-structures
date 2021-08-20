@@ -54,6 +54,9 @@ class Graph:
     def __len__(self):
         return self._size
 
+    def __str__(self):
+        return "".join("  ".join(str(val) for val in item) + "\n" for item in self._graph)
+
     def add_edge(self, v1, v2):
         if v1 != v2 and self._graph[v1][v2] == 0:
             self._graph[v1][v2] = 1
@@ -120,4 +123,5 @@ if __name__ == "__main__":
     for i in range(25):
         graph.add_edge(randint(0, n-1), randint(0, n-1))
 
-    print(graph.dfs())
+    print(graph.dfs(5))
+    print(graph)
