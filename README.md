@@ -1,6 +1,6 @@
 # data-structures
 
-Currently learned data structures:
+Data structures:
 * Linear data structures
   * Traditional Arrays and Lists (not included here)
   * Linked list
@@ -15,10 +15,8 @@ Currently learned data structures:
   * Array-based heap
 * Set
 * Graph
+  * Kruskal’s algorithm
+  * Prims' Algorithm
 
 Algorithms and concepts:
-* Graphs
-  * Kruskal’s algorithm
-  * Prims' Algoithm
-* Hashing
 * Heapsort
