@@ -54,25 +54,22 @@ class BST:
     def delete(self, val):
 
         def newNode(node):  # Node that will take the deleted node's spot
-            if not node.left and not node.right:  # No children: Just delete the node
-                return None
-            if not node.left:  # 1 child: replace the node with that child
+            # At least one child missing: Replace the node with the other child
+            if not node.left:
                 return node.right
             if not node.right:
                 return node.left
 
-            curr_node = node.right  # Two children: replace this node with the next smallest node
-            if not curr_node.left:  # If the node's right node is the next smallest, shift the right node to this node
-                node.val = curr_node.val
-                node.right = curr_node.right
-                return node
-            while True:  # Otherwise, find the next smallest node by traversing down left
+            # Two children: replace this node with the inorder successor
+            curr_node = node.right
+            curr_parent = node
+            while True:
+                if not curr_node.left:
+                    node.val = curr_node.val
+                    curr_parent.left = curr_node.right  # Delete this node
+                    return node
                 curr_parent = curr_node
                 curr_node = curr_node.left
-                if not curr_node.left:
-                    node.val = curr_node.val  # Replace the original node's value with this node
-                    curr_parent.left = curr_node.right  # And delete this node
-                    return node
 
         if not self.root:
             return False
@@ -91,7 +88,7 @@ class BST:
             else:  # Replace it with the new node
                 if parent.left == curr:
                     parent.left = newNode(curr)
-                if parent.right == curr:
+                else:
                     parent.right = newNode(curr)
                 return True
         return False
