@@ -17,12 +17,12 @@ A (work-in-progress) reference guide for data structures and algorithms I come a
     - Red-black tree
   - Array-based heap
 
+## Algorithms
+- Heapsort
+- Hashing
+
 ## Other
 - Set
 - Graph
   - Kruskal’s algorithm
   - Prims' Algorithm
-
-## Algorithms
-- Heapsort
-- Hashing
