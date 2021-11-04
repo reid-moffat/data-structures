@@ -1,22 +1,28 @@
-# data-structures
+# Data Structures
 
-Data structures:
-* Linear data structures
-  * Traditional Arrays and Lists (not included here)
-  * Linked list
-  * Stack
-  * Queue
-* Tree
-  * Binary tree
-  * Binary search tree
-    * Traditional BST
-    * AVL tree
-    * Red-black tree
-  * Array-based heap
-* Set
-* Graph
-  * Kruskal’s algorithm
-  * Prims' Algorithm
+A (work-in-progress) reference guide for data structures and algorithms I come across
 
-Algorithms and concepts:
-* Heapsort
+## Linear Data structures
+- Traditional Arrays and Lists (not included here)
+- Linked list
+- Stack
+- Queue
+
+## Trees
+- Tree
+- Binary tree
+  - Binary search tree
+    - Traditional BST
+    - AVL tree
+    - Red-black tree
+  - Array-based heap
+
+## Other
+- Set
+- Graph
+  - Kruskal’s algorithm
+  - Prims' Algorithm
+
+## Algorithms
+- Heapsort
+- Hashing
