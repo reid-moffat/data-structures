@@ -3,7 +3,7 @@
 A (work-in-progress) reference guide for data structures and algorithms I come across
 
 ## Linear Data structures
-- Traditional Arrays and Lists (not included here)
+- Traditional Arrays/Lists/ArrayLists
 - Linked list
 - Stack
 - Queue
