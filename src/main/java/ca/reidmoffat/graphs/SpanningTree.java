@@ -1,3 +1,9 @@
+package ca.reidmoffat.graphs;
+
+public class SpanningTree {
+}
+
+/*
 """
 A subgraph of a graph is a spanning tree if it contains every vertex of the graph and is a valid tree (only one parent
 per node/vertex). Since we likely have to remove edges, there can be more than one spanning tree for a graph (all fully
@@ -65,3 +71,5 @@ def prim_mst(graph: List[List[int]]):
                 possible_edges[(new_node, neighbour)] = graph[new_node][neighbour]
 
     return total_weight
+
+ */
