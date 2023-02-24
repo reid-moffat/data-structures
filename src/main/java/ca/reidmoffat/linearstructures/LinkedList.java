@@ -1,3 +1,9 @@
+package ca.reidmoffat.linearstructures;
+
+public class LinkedList {
+}
+
+/*
 """
 A linked list is a linear data structure that consists of Nodes linked together with pointers
 
@@ -84,3 +90,4 @@ if __name__ == "__main__":
     print(f"Is 50 in this Linked List? {50 in linked_list}")
     print("Linked List nodes in order: ")
     linked_list.print()
+ */
