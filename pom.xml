@@ -20,5 +20,6 @@
             <version>5.9.2</version>
         </dependency>
     </dependencies>
+    <testSourceDirectory>src/test/java/ca/reidmoffat</testSourceDirectory>
 
 </project>
