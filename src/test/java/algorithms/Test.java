@@ -1,10 +1,9 @@
-package ca.reidmoffat;
+package algorithms;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
-class MainTest {
+public class Test {
 
     @BeforeEach
     void setUp() {
@@ -14,7 +13,9 @@ class MainTest {
     void tearDown() {
     }
 
-    @Test
-    void main() {
+    @org.junit.jupiter.api.Test
+    void x2() {
+        int x = 2 - 1;
+        assert 1 == x;
     }
 }
