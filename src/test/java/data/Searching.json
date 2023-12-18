@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Empty array",
+    "Array": [],
+    "Target": 1,
+    "Expected": -1
+  },
+  {
+    "Name": "",
+    "Array": [],
+    "Target": 1,
+    "Expected": -1
+  },
+  {
+    "Name": "",
+    "Array": [],
+    "Target": 1,
+    "Expected": -1
+  },
+  {
+    "Name": "",
+    "Array": [],
+    "Target": 1,
+    "Expected": -1
+  }
+]
