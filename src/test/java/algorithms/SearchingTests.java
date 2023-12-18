@@ -76,7 +76,17 @@ public class SearchingTests {
     }
 
     @Test
+    public void LinearSearch() {
+        runAllTCs("LinearSearch", Searching::linearSearch);
+    }
+
+    @Test
     public void BinarySearch() {
         runAllTCs("BinarySearch", Searching::binarySearch);
+    }
+
+    @Test
+    public void RecursiveBinarySearch() {
+        runAllTCs("RecursiveBinarySearch", Searching::recursiveBinarySearch);
     }
 }
