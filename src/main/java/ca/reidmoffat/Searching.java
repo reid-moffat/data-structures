@@ -4,7 +4,7 @@ package ca.reidmoffat;
  * Searching algorithms
  */
 public class Searching {
-    public <T> int linearSearch(T[] array, T key) {
+    public static <T> int linearSearch(T[] array, T key) {
         for (int i = 0; i < array.length; ++i) {
             if (array[i].equals(key)) {
                 return i;
@@ -13,7 +13,7 @@ public class Searching {
         return -1;
     }
 
-    public <T extends Comparable<T>> int binarySearch(T[] array, T key) {
+    public static <T extends Comparable<T>> int binarySearch(T[] array, T key) {
         int low = 0;
         int high = array.length - 1;
         int mid;
@@ -31,11 +31,11 @@ public class Searching {
         return -1;
     }
 
-    public <T extends Comparable<T>> int recursiveBinarySearch(T[] array, T key) {
+    public static <T extends Comparable<T>> int recursiveBinarySearch(T[] array, T key) {
         return recursiveBinarySearchHelper(array, key, 0, array.length - 1);
     }
 
-    private <T extends Comparable<T>> int recursiveBinarySearchHelper(T[] array, T key, int low, int high) {
+    private static <T extends Comparable<T>> int recursiveBinarySearchHelper(T[] array, T key, int low, int high) {
         if (low > high) {
             return -1;
         }
