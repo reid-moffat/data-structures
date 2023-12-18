@@ -1,3 +1,9 @@
+package ca.reidmoffat.graphs;
+
+public class Graph {
+}
+
+/*
 """
 Graphs are non-linear data structures consisting of connected nodes
 
@@ -125,3 +131,5 @@ if __name__ == "__main__":
 
     print(graph.dfs(5))
     print(graph)
+
+ */

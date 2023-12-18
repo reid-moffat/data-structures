@@ -1,3 +1,8 @@
+package ca.reidmoffat.trees;
+
+public class AVLTree {
+}
+/*
 """
 An issue with binary trees is the insertion order can make the tree unbalanced, making the complexity O(n) for all
 operations
@@ -231,3 +236,5 @@ if __name__ == "__main__":
     tree = tree_map.put(tree, 25, "david")
 
     print2D(tree)
+
+ */

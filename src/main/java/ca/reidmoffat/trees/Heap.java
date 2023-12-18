@@ -1,3 +1,8 @@
+package ca.reidmoffat.trees;
+
+public class Heap {
+}
+/*
 """
 A heap is a complete binary tree (NOT a BST though) that is used to quickly get the top item and insert items
 There are two main uses of heaps: priority queues and heapsort
@@ -96,3 +101,5 @@ if __name__ == "__main__":
     print("Values: ", end='')
     for num in range(n):
         print(q.dequeue(), end=' ')
+
+ */

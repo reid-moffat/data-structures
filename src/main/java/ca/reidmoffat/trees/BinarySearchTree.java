@@ -1,3 +1,9 @@
+package ca.reidmoffat.trees;
+
+public class BinarySearchTree {
+}
+
+/*
 """
 A binary search tree is a sorted binary tree that allows for log complexity* searching. Unlike binary search on an
 array, inserting and deleting nodes only takes log time*
@@ -173,3 +179,5 @@ if __name__ == "__main__":
 
     bst.print2D()
     assert bst.root is None
+
+ */

@@ -1,3 +1,8 @@
+package ca.reidmoffat.linearstructures;
+
+public class Queue {
+}
+/*
 """
 A queue is a collection of objects according to the first-in-first-out principle
 
@@ -53,3 +58,5 @@ if __name__ == "__main__":
 
     for i in range(50):
         print(f"{queue.dequeue()} ", end='')
+
+ */

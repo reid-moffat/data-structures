@@ -1,3 +1,9 @@
+package ca.reidmoffat.linearstructures;
+
+public class Stack {
+}
+
+/*
 """
 A stack is a collection of objects according to the last-in-first-out principle
 
@@ -47,3 +53,4 @@ if __name__ == "__main__":
 
     for i in range(letters.size()):
         print(letters.pop(), end='')
+ */

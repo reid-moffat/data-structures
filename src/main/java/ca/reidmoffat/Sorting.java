@@ -1,3 +1,10 @@
+package ca.reidmoffat;
+
+public class Sorting {
+    public void heapSort() {
+    }
+}
+/*
 """
 HeapSort uses heaps to find the maximum element each time and place it in the sorted section of the array (like
 selection sort, but heaps are O(log(n)) to shift an element instead of O(n) and we use the largest, not smallest,
@@ -57,3 +64,5 @@ if __name__ == "__main__":
     print(f"Execution time: {1000*(end_time - start_time):.2f} ms")
 
     assert all([array[i] <= array[i+1] for i in range(n-1)])
+
+ */

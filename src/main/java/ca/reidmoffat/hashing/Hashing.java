@@ -1,3 +1,8 @@
+package ca.reidmoffat.hashing;
+
+public class Hashing {
+}
+/*
 """
 Hash tables are often the most efficient way to search for items by exploiting the speed of accessing array elements
 
@@ -102,3 +107,4 @@ def double_hash(hash1, hash2, i, m):
     :return: The next index to be checked if it is open
     """
     return (hash1 + i*hash2) % m
+ */
